@@ -1,0 +1,72 @@
+{
+	"config":
+	{
+		"template": "default",
+		"ajax": true,
+		"db":
+		{
+			"table": "users",
+			"insert": true,
+			"update": false
+		}
+	},
+	"attributes":
+	{
+		"id":     "FormID",
+		"method": "post",
+		"action": "form.php"
+	},
+	"fields":
+	{
+		"name":
+		{
+			"id":		 "form-x-name",
+			"type":      "text",
+			"maxlength": 10,
+			"label":     "Name",
+			"validate":  ["required","string"]
+		},
+		"birth-date":
+		{
+			"id":		 "form-x-age",
+			"type":      "number",
+			"maxlength": 2,
+			"label":     "Age",
+			"validate":  ["required"]
+		},
+		"sex":
+		{
+			"id":		      "form-x-name",
+			"type":           "radio",
+			"options":        {"Male":"m", "Female":"f"},
+			"option-default": "m",
+			"label":          "Sex",
+			"validate":       ["required"]
+		},
+		"blood-type":
+		{
+			"id":		      "form-x-name",
+			"type":           "select",
+			"options":        {
+								"O+":"o+",
+								"O-":"o-",
+								"A+":"a+",
+								"A-":"a-",
+								"B+":"b+",
+								"B-":"b-",
+								"AB+":"ab+",
+								"AB-":"ab-"
+							  },
+			"label":          "Blood type",
+			"validate":       ["required"]
+		},
+		"email":
+		{
+			"id":		 "form-x-age",
+			"type":      "editbox",
+			"maxlength": 2,
+			"label":     "Email",
+			"validate":  ["required","email"]
+		}
+	}
+}
